@@ -1,0 +1,283 @@
+@font-face {
+    font-family: 'FK Display';
+    src: url('assets/fonts/FKDisplay-Regular.woff2') format('woff');
+}
+@font-face {
+    font-family: 'IBM Plex Mono';
+    src: url('assets/fonts/IBMPlexMono-Medium.woff2') format('woff');
+}
+@font-face {
+    font-family: 'Inter';
+    src: url('assets/fonts/inter-v13-latin-500.woff2') format('woff');
+}
+@font-face {
+    font-family: 'Inter-regular';
+    src: url('assets/fonts/inter-v13-latin-regular.woff2') format('woff');
+}
+
+/* ____reset____ */
+
+/* *{
+    box-sizing: border-box;
+} */
+
+body, p, a, ul, li, button{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+.main-wrap{
+    font-family: 'FK Display';
+    font-size: 500;
+}
+
+.section1{
+    display: flex;
+    flex-flow: column;
+    gap: 6px;
+    color: #fff;
+    background-image: url('https://raw.org/image/raw-bg.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 90% 80%;
+    padding: 120px 12px 12px;
+}
+
+.home-brackets{
+    position: relative;
+    padding: 24px 0;
+}
+
+.home-brackets::before{
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 8px;
+    content: "";
+    display: block;
+    position: absolute;
+    border: 2px solid #FFFFFF29;
+    border-radius: 8px 8px 0 0;
+    border-bottom: none;
+}
+.home-brackets::after{
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 8px;
+    content: "";
+    display: block;
+    position: absolute;
+    border: 2px solid #FFFFFF29;
+    border-radius: 0 0 8px 8px;
+    border-top: none;
+}
+
+.home-features{
+    display: flex;   
+    flex-flow: column;
+    gap: 24px;
+}
+
+.section-title{
+    display: block;
+    font-family: 'IBM Plex Mono';
+    font-size: 12px;
+    letter-spacing: 1.2px;
+    color: #FFFFFF99;
+    margin-bottom: 24px;
+}
+
+.head-des{
+    font-size: 24px;
+    line-height: 44px;
+    font-weight: 500;
+    margin: 16.08px 0;
+}
+
+.icons{
+    width: 90px;
+    height: 34px;
+    vertical-align: middle;
+}
+
+.things{
+    stroke: #ff4422;
+}
+
+.maths{
+    stroke: #FFF5AD;
+}
+
+.tools{
+    stroke: #40F2DD;
+}
+
+.card{
+    height: 352px;
+    display: grid;
+    position: relative;
+    gap: 16px;
+    grid-template-rows: auto 1fr auto;
+    color: #fff;
+    overflow: hidden;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 8px;
+    background-color: #FFF5AD;
+    padding: 24px;
+}
+
+.main-card{
+    grid-template-columns: 2fr 1fr;
+    background-image: url("https://raw.org/image/teaser/s100.jpg");
+}
+
+.card-info{
+    display: flex;
+    gap: 8px;
+    grid-column: 1 / 2;
+    font-family: 'IBM Plex Mono';
+    font-size: 11px;
+    letter-spacing: 1.1px;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-transform: uppercase;
+}
+
+.card-category{
+    height: 28px;
+    display: grid;
+    place-items: center;
+    border: 1px solid #fff;
+    border-radius: 15px;
+    white-space: nowrap;
+    padding: 0 16px;
+    flex: 0 1 100%;
+}
+
+.card-title{
+    font-size: 32px;
+    font-weight: 500;
+    grid-column: 1 / 2;
+    margin: 0;
+}
+
+.card-description{
+    display: block;
+    overflow: hidden;
+    font-family: 'IBM Plex Mono';
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    grid-column: 1 / 2;
+}
+
+.card-arrow{
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    grid-column: 1 / 2;
+}
+
+.button{
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 56px;
+    padding: 0 30px;
+    background-color: #40F2DD;
+}
+
+.button svg{
+    width: 24px;
+    height: 24px;
+    stroke: #222222;
+}
+
+.sub-card{
+    color: #222222;
+}
+
+.sub-card::after{
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    content: "";
+    position: absolute;
+    background-image: url("https://raw.org/image/stage/card-background.svg");
+    opacity: 0.5;
+}
+
+.sub-category{
+    border: 1px solid #222222;
+}
+
+.sub-card-title{
+    font-size: 24px;
+}
+
+.sub-card-arrow{
+    justify-content: flex-start;
+}
+
+.sub-card-arrow .button{
+    background-color: #222222;
+}
+
+.sub-card-arrow .button svg{
+    stroke: #fff;
+}
+
+.sub-features{
+    display: flex;
+    flex-flow: column;
+    gap: 24px;
+}
+
+.section-popular{
+    max-height: 400px;
+    border: 1px solid #FFFFFF29;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.section-popular ol{
+    display: flex;
+    flex-flow: column;
+    margin: 0;
+    padding: 0;
+}
+
+.popular-card{
+    color: #fff;
+    display: grid;
+    grid-template-columns: 34px auto;
+    gap: 16px;
+    padding: 8px 24px;
+}
+
+.section-popular li:first-child a{
+    padding-bottom: 16px;
+    padding-top: 24px;
+    border: 1px solid #FFFFFF29;
+}
+
+.section-popular li:first-child h2{
+    font-family: inherit;
+    font-size: 28px;
+    font-weight: inherit;
+}
+
+.popular-head{
+    font-family: 'Inter';
+    font-size: 20px;
+}
+
+.popular-card h2{
+    margin: 0;
+}

@@ -241,7 +241,7 @@ body, p, a, ul, li, button{
 
 .section-popular{
     height: 100%;
-    max-height: 400px;
+    max-height: 398px;
     border: 1px solid #FFFFFF29;
     border-radius: 8px;
     overflow: hidden;
@@ -383,7 +383,7 @@ body, p, a, ul, li, button{
     width: 100%;
     height: 100%;
     object-fit: cover;
-    aspect-ratio: 1.8;
+    aspect-ratio: 1.81;
 }
 
 .image-container .button{
@@ -439,6 +439,10 @@ body, p, a, ul, li, button{
     margin-top: 56px;
 }
 
+.section-list .section-card{
+    gap: 24px;
+}
+
 .down-list{
     display: grid;
     grid-template-columns: 1fr auto;
@@ -450,6 +454,96 @@ body, p, a, ul, li, button{
     font-size: 28px;
     font-weight: 500;
     margin: 0;
+}
+
+.down-list p{
+    grid-column: 1/2;
+}
+
+.down-list .image-button{
+    width: fit-content;
+    height: 56px;
+    background-color: #222222;
+    padding: 0px 24px;
+    opacity: 1;
+    place-self: center;
+    grid-row: 1 / 3;
+    grid-column: 2 / 3;
+}
+
+.down-list svg{
+    stroke: #fff;
+}
+
+.related-all{
+    display: grid;
+    place-items: center;
+    padding: 100px 0;
+}
+
+.section-button{
+    display: flex;
+    flex-flow: row;
+    gap: 32px;
+    align-items: center;
+}
+
+.all-btn{
+    height: 54px;
+    display: grid;
+    place-items: center;
+    border: 1px solid #22222229;
+    border-radius: 56px;
+    padding: 0px 24px;
+}
+
+.section-button span{
+    font-size: 48px;
+    color: #222222;
+    border-bottom: 1px solid #40F2DD;
+}
+
+/* Section-Dark */
+.dark{
+    background-color: #222222;
+    color: #fff;
+}
+.dark .section-logo svg{
+    stroke: #fff;
+}
+.white{
+    color: #fff;
+}
+.date-col{
+    color: rgba(255, 255, 255, 0.6);
+}
+.dark .section-light::after{
+    border: 2px solid #FFFFFF29;
+    border-top: none;
+}
+.dark .section-light::before{
+    border: 2px solid #FFFFFF29;
+    border-bottom: none;
+}
+.dark .down-list .image-button{
+    background-color: #fff;
+}
+.dark .down-list svg{
+    stroke: #222222;
+}
+.dark .section-button .all-btn{
+    border: 1px solid #FFFFFF29;
+}
+.dark .section-button svg{
+    fill: #fff;
+}
+.dark .section-button span{
+    color: #fff;
+    border-bottom: 1px solid #FFF5AD;
+}
+
+.sec-light .section-button span{
+    border-bottom: 1px solid #FF4422;
 }
 
 /* js */
@@ -467,4 +561,26 @@ body, p, a, ul, li, button{
     transform: translate(-50%, -50%) scale(0);
     pointer-events: none;
     z-index: 1;
+}
+
+/* Footer */
+
+footer{
+    padding: 12px;
+    background-color: #222222;
+}
+
+.footer-top{
+    display: flex;
+    padding: 48px 0;
+    overflow: auto;
+    scrollbar-width: none;
+}
+
+.footer-top ul{
+    display: flex;
+}
+
+.footer-top a{
+    color: #fff;
 }

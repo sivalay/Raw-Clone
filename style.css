@@ -28,6 +28,59 @@ body, p, a, ul, li, button{
     list-style-type: none;
 }
 
+header{
+    /* height: 0; */
+    /* display: block; */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-container{
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 56px;
+    display: flex;
+    position: absolute;
+    gap: 12px;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(255, 255, 255, 0);
+    padding-right: 24px;
+    margin: 12px;
+    text-transform: uppercase;
+    transform: translate(0, 0);
+    transition: transform 0.2s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.header-container::before{
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    content: '';
+    position: absolute;
+    background-color: #fff;
+    border-radius: 8px;
+    z-index: -1;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.header-container a{
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.header-container svg{
+    height: 12px;
+    width: 69.14px;
+    margin-left: 24px;
+    fill: #222222;
+    transition: fill 0.3s ease-in-out;
+}
+
 .main-wrap{
     font-family: 'FK Display';
     font-size: 500;
@@ -50,7 +103,7 @@ body, p, a, ul, li, button{
     padding: 24px 0;
 }
 
-.home-brackets::before{
+.brackets::before{
     top: 0;
     left: 0;
     width: 100%;
@@ -62,7 +115,7 @@ body, p, a, ul, li, button{
     border-radius: 8px 8px 0 0;
     border-bottom: none;
 }
-.home-brackets::after{
+.brackets::after{
     bottom: 0;
     left: 0;
     width: 100%;
@@ -343,6 +396,7 @@ body, p, a, ul, li, button{
 
 .section{
     display: grid;
+    position: relative;
     grid-template-columns: 1fr;
     padding: 12px;
     padding-top: 120px;
@@ -399,6 +453,7 @@ body, p, a, ul, li, button{
 
 .section-light{
     display: flex;
+    position: relative;
     flex-direction: column;
     gap: 24px;
     flex: 1;
@@ -437,6 +492,7 @@ body, p, a, ul, li, button{
 
 .section-list{
     margin-top: 56px;
+    gap: 24px;
 }
 
 .section-list .section-card{
@@ -542,10 +598,6 @@ body, p, a, ul, li, button{
     border-bottom: 1px solid #FFF5AD;
 }
 
-.sec-light .section-button span{
-    border-bottom: 1px solid #FF4422;
-}
-
 /* js */
 .hoverable::before{
     top: 0;
@@ -563,10 +615,82 @@ body, p, a, ul, li, button{
     z-index: 1;
 }
 
+/* Section-comments */
+.section-comments{
+    margin: 12px;
+    margin-top: 120px;
+}
+
+.comments{
+    position: relative;
+    padding: 13px 0;
+}
+
+.comments::after{
+    border: 2px solid #22222229;
+    border-top: none;
+}
+
+.comments::before{
+    border: 2px solid #22222229;
+    border-bottom: none;
+}
+
+.stream-title{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: 'IBM Plex Mono';
+    font-size: 12px;
+    color: rgb(34, 34, 34);
+    padding: 12px 0;
+}
+
+.stream-list{
+    display: flex;
+    gap: 24px;
+    overflow-x: auto;
+    scrollbar-width: none;
+    padding: 80px 0;
+    background-image: url("https://raw.org/image/stage/stage-background.svg");
+}
+
+.stream-list a{
+    width: 354px;
+    display: flex;
+    flex-flow: column;
+    gap: 32px;
+    font-family: 'Inter-regular';
+    padding: 32px;
+    border: 1px solid #22222229;
+    border-radius: 8px;
+    background-color: #fff;
+}
+
+.stream-text{
+    font-size: 18px;
+    color: #222222;
+}
+
+.stream-info{
+    font-size: 12px;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    color: rgba(34, 34, 34, 0.6);
+}
+
+.sec-light .section-button span{
+    border-bottom: 1px solid #FF4422;
+}
+
+.sec-light .all-btn{
+    padding: 0 21px 0px 24px;
+}
+
 /* Footer */
 
 footer{
-    padding: 12px;
+    padding: 0px 12px;
     background-color: #222222;
 }
 
@@ -578,9 +702,134 @@ footer{
 }
 
 .footer-top ul{
+    width: 1200px;
+    height: 100%;
     display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 36px;
+}
+
+.footer-category{
+    display: flex;
+    align-items: center;
+}
+
+.footer-category::before{
+    width: 60px;
+    height: 1px;
+    content: '';
+    display: block;
+    margin-right: 36px;
+}
+
+.footer-category:first-child::before{
+    width: 30px;
 }
 
 .footer-top a{
+    display: inline-flex;
+    align-items: center;
     color: #fff;
+    transition: color 0.3s ease-in-out;
+    font-family: 'Inter-regular';
+    font-size: 40px;
 }
+
+.category-text{
+    position: relative;
+}
+
+.category-id{
+    top: -10px;
+    left: 4px;
+    position: absolute;
+    font-size: 9px;
+    letter-spacing: 0.9px;
+    color: rgba(255, 255, 255, 0.5);
+    transition: color 0.3s ease-in-out;
+}
+
+.category-icon{
+    width: 16px;
+    height: 16px;
+    display: block;
+    position: relative;
+    margin: 0px 20px;
+    transition: width 0.2s ease-in-out, height 0.2s ease-in-out;
+}
+
+.category-icon::before{
+    top: 50%;
+    left: 50%;
+    width: 16px;
+    height: 16px;
+    display: block;
+    position: absolute;
+    content: '';
+    background-color: white;
+    border-radius: 50%;
+    opacity: 1;
+    transform: translate(-50%, -50%);
+    transition: opacity 0.2s ease-in-out, width 0.2s ease-in-out, height 0.2s ease-in-out;
+}
+
+.category-count{
+    bottom: -10px;
+    left: 16px;
+    position: absolute;
+    font-size: 9px;
+    letter-spacing: 0.9px;
+    color: rgba(255, 255, 255, 0.5);
+    transition: color 0.3s ease-in-out;
+}
+
+.footer-end{
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border: 1px solid #FFFFFF29;
+    border-bottom: none;
+    border-radius: 8px 8px 0 0;
+    padding: 16px 16px 15px 16px;
+    background-color: rgba(255, 255, 255, 0.05);
+    color: rgba(255, 255, 255, 0.5);
+    text-transform: uppercase;
+    letter-spacing: 0.9px;
+}
+
+.footer-copyright{
+    font-family: 'IBM Plex Mono';
+}
+
+.footer-end nav ul{
+    height: 100%;
+    display: flex;
+    gap: 24px;
+    align-items: center;
+    justify-content: flex-end;
+    font-family: 'Inter-regular';
+    /* font-size: 12px; */
+}
+
+.footer-end span{
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.footer-info{
+    font-size: 12px;
+}
+
+.footer-social ul{
+    width: 100%;
+    font-size: 9px;
+}
+
+.header-menu{
+    width: 44px;
+    height: 44px;
+    display: block;
+    cursor: pointer;
+}
+

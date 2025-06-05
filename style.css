@@ -47,7 +47,7 @@ header{
     align-items: center;
     justify-content: space-between;
     background-color: rgba(255, 255, 255, 0);
-    padding-right: 24px;
+    padding-right: 6px;
     margin: 12px;
     text-transform: uppercase;
     transform: translate(0, 0);
@@ -79,6 +79,24 @@ header{
     margin-left: 24px;
     fill: #222222;
     transition: fill 0.3s ease-in-out;
+}
+
+.header-menu{
+    width: 44px;
+    height: 44px;
+    display: block;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+}
+
+.header-menu svg{
+    width: 24px;
+    height: 24px;
+    fill: #222222;
+    stroke: #222222;
+    margin: 0;
+    transition: stroke 0.3s ease-in-out;
 }
 
 .main-wrap{
@@ -437,7 +455,11 @@ header{
     width: 100%;
     height: 100%;
     object-fit: cover;
-    aspect-ratio: 1.81;
+    aspect-ratio: 1.811;
+}
+
+.down-cards img{
+    aspect-ratio: 1.8;
 }
 
 .image-container .button{
@@ -491,12 +513,18 @@ header{
 }
 
 .section-list{
+    display: flex;
+    flex-flow: column;
     margin-top: 56px;
     gap: 24px;
 }
 
 .section-list .section-card{
     gap: 24px;
+}
+
+.section-list .down-cards{
+    gap: 22px;
 }
 
 .down-list{
@@ -617,8 +645,7 @@ header{
 
 /* Section-comments */
 .section-comments{
-    margin: 12px;
-    margin-top: 120px;
+    margin: 120px 12px 0;
 }
 
 .comments{
@@ -792,7 +819,7 @@ footer{
     border: 1px solid #FFFFFF29;
     border-bottom: none;
     border-radius: 8px 8px 0 0;
-    padding: 16px 16px 15px 16px;
+    padding: 16px;
     background-color: rgba(255, 255, 255, 0.05);
     color: rgba(255, 255, 255, 0.5);
     text-transform: uppercase;
@@ -804,6 +831,7 @@ footer{
 }
 
 .footer-end nav ul{
+    /* width: 100%; */
     height: 100%;
     display: flex;
     gap: 24px;
@@ -821,15 +849,10 @@ footer{
     font-size: 12px;
 }
 
-.footer-social ul{
+.footer-social{
     width: 100%;
+}
+
+.footer-social ul{
     font-size: 9px;
 }
-
-.header-menu{
-    width: 44px;
-    height: 44px;
-    display: block;
-    cursor: pointer;
-}
-
